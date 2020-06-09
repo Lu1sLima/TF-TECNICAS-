@@ -4,7 +4,9 @@
 ## HOW TO RUN:
 
 ### Spring:
-> mvn spring-boot:run
+```bash
+mvn spring-boot:run
+```
 
 ### Angular:
 > npm start

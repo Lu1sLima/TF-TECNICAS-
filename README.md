@@ -1,5 +1,5 @@
 # TRABALHO FINAL - TÉCNICAS DE PROGRAMAÇÃO
-** GRUPO 11: **
+**GRUPO 11:**
 ```python
 Luís Lima, Adilson Medronha e Lucas M. Garcia
 ```

@@ -14,7 +14,7 @@ mvn spring-boot:run
 ### Angular:
 ```bash
 cd src/frontend
-if it is  your first time run do 'npm install' then
+if it is your first time run do 'npm install' then
 npm start
 ```
 

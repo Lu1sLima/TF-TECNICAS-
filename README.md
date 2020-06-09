@@ -33,7 +33,7 @@ npm start
   
   <summary>Mocks</summary>
   
-  ```bash
+  ```python
                                                     Mocks ficarão aqui! :)
   ```
 

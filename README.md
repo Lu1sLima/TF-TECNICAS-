@@ -1,6 +1,6 @@
 # TRABALHO FINAL - TÉCNICAS DE PROGRAMAÇÃO
 **GRUPO 11:**
-```python
+```bash
 Luís Lima, Adilson Medronha e Lucas M. Garcia
 ```
 

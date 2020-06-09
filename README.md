@@ -9,7 +9,10 @@ mvn spring-boot:run
 ```
 
 ### Angular:
-> npm start
+```bash
+npm start
+```
+
 
 
 ## RELAÇÃO DE FUNCIONALIDADES:

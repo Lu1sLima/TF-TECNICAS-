@@ -22,7 +22,7 @@ npm start
 - Pesquisar com base na cidade/estado do usuário
 - Recomendação de veículos (categoria/marca/modelo) com base na última pesquisa do usuário
 - Ranking de marcas mais pesquisadas
-- ~~Integração com API de geolocalização (pesquisa do endereço do anunciante)
+- ~~Integração com API de geolocalização (pesquisa do endereço do anunciante)~~
 
 #### APLICAÇÃO - EXEMPLO:
 > https://www.webmotors.com.br/

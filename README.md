@@ -1,3 +1,10 @@
 ## TRABALHO FINAL - TÉCNICAS DE PROGRAMAÇÃO
 
-> Teste
+
+# HOW TO RUN:
+
+- Spring:
+> mvn spring-boot:run
+
+- Angular:
+> npm start

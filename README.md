@@ -32,9 +32,11 @@ npm start
   
   <summary>Mocks</summary>
   
-  
+<p align="center">
   ```bash
   Mocks ficarão aqui! :)
   ```
+</p>
+
   
 </details>

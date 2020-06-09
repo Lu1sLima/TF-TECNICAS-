@@ -10,6 +10,7 @@ mvn spring-boot:run
 
 ### Angular:
 ```bash
+cd src/frontend
 npm start
 ```
 

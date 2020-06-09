@@ -1,7 +1,7 @@
 # TRABALHO FINAL - TÉCNICAS DE PROGRAMAÇÃO
 
 
-### HOW TO RUN:
+## HOW TO RUN:
 
 ### Spring:
 ```bash

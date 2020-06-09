@@ -32,10 +32,9 @@ npm start
   
   <summary>Mocks</summary>
   
-Mocks ficarão aqui :)
   
-  ```javascript
-  console.log("I'm a code block!");
+  ```bash
+  Mocks ficarão aqui! :)
   ```
   
 </details>

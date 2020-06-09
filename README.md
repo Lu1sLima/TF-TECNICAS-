@@ -1,10 +1,10 @@
-## TRABALHO FINAL - TÉCNICAS DE PROGRAMAÇÃO
+# TRABALHO FINAL - TÉCNICAS DE PROGRAMAÇÃO
 
 
-# HOW TO RUN:
+## HOW TO RUN:
 
-- Spring:
+### Spring:
 > mvn spring-boot:run
 
-- Angular:
+### Angular:
 > npm start

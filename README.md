@@ -39,7 +39,7 @@ npm start
   
     ```python
                                                    Tela Principal
-  ```
+    ```
   
   ![img](https://i.imgur.com/A3RiAiu.jpg)
   

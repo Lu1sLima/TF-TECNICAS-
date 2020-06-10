@@ -17,7 +17,10 @@ cd src/frontend
 if it is your first time run do 'npm install' then
 npm start
 ```
+#### APLICAÇÃO - EXEMPLO:
+> https://www.webmotors.com.br/
 
+Plataforma de anúncios de compra/venda de carros. Na aplicação, será possível anunciar veículos, buscar veículos, comparar preços, entrar em contato com o vendedor/anunciante e também será possível a interação entre usuários através de um sistema de feedback e notas.
 
 
 ## RELAÇÃO DE FUNCIONALIDADES:
@@ -27,9 +30,6 @@ npm start
 - Recomendação de veículos (categoria/marca/modelo) com base na última pesquisa do usuário
 - Ranking de marcas mais pesquisadas
 - ~~Integração com API de geolocalização (pesquisa do endereço do anunciante)~~
-
-#### APLICAÇÃO - EXEMPLO:
-> https://www.webmotors.com.br/
 
 
 

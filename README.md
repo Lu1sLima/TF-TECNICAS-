@@ -17,10 +17,13 @@ cd src/frontend
 if it is your first time run do 'npm install' then
 npm start
 ```
+
+# A APLICAÇÃO:
+<p>Plataforma de anúncios de compra/venda de carros. Na aplicação, será possível anunciar veículos, buscar veículos, comparar preços, entrar em contato com o vendedor/anunciante e também será possível a interação entre usuários através de um sistema de feedback e notas.</p>
+
 #### APLICAÇÃO - EXEMPLO:
 > https://www.webmotors.com.br/
 
-<p>Plataforma de anúncios de compra/venda de carros. Na aplicação, será possível anunciar veículos, buscar veículos, comparar preços, entrar em contato com o vendedor/anunciante e também será possível a interação entre usuários através de um sistema de feedback e notas.</p>
 
 
 ## RELAÇÃO DE FUNCIONALIDADES:

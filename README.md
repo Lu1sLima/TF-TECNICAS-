@@ -30,7 +30,7 @@ npm start
 
 - Possibilidade de contato com anunciante
 - Pesquisar com base na cidade/estado do usuário
-- Recomendação de veículos (categoria/marca/modelo) com base na última pesquisa do usuário
+- Recomendação de veículos (categoria/marca/modelo) com base nas 5 últimas pesquisas do usuário
 - Ranking de marcas mais pesquisadas
 - ~~Integração com API de geolocalização (pesquisa do endereço do anunciante)~~
 

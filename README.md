@@ -20,7 +20,7 @@ npm start
 #### APLICAÇÃO - EXEMPLO:
 > https://www.webmotors.com.br/
 
-Plataforma de anúncios de compra/venda de carros. Na aplicação, será possível anunciar veículos, buscar veículos, comparar preços, entrar em contato com o vendedor/anunciante e também será possível a interação entre usuários através de um sistema de feedback e notas.
+  Plataforma de anúncios de compra/venda de carros. Na aplicação, será possível anunciar veículos, buscar veículos, comparar preços, entrar em contato com o vendedor/anunciante e também será possível a interação entre usuários através de um sistema de feedback e notas.
 
 
 ## RELAÇÃO DE FUNCIONALIDADES:

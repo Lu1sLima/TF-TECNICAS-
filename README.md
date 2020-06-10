@@ -37,8 +37,11 @@ npm start
   
   <summary>Mocks</summary>
   
+  ![img](https://i.imgur.com/A3RiAiu.jpg)
+  
+
   ```python
-                                                    Mocks ficarão aqui! :)
+                                                   Tela Principal
   ```
 
   

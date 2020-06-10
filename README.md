@@ -37,12 +37,10 @@ npm start
   
   <summary>Mocks</summary>
   
-  ![img](https://i.imgur.com/A3RiAiu.jpg)
-  
-
-  ```python
+    ```python
                                                    Tela Principal
   ```
-
+  ![img](https://i.imgur.com/A3RiAiu.jpg)
+  
   
 </details>

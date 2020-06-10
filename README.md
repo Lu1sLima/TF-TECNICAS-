@@ -35,7 +35,7 @@ npm start
 
 <details>
   
-  <summary>Mocks</summary>
+  <summary>Mocks (Clique para expandir)</summary>
   
    
                                                    Tela Principal

@@ -60,7 +60,7 @@ npm start
    
                                                    Diagrama
   
-  ![img](blob:https://imgur.com/ec79a15a-11a8-4c04-9115-6588f35c23a8)
+  ![img](https://i.imgur.com/wXN7Bae.jpg)
 
   
   

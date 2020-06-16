@@ -58,7 +58,7 @@ npm start
   <summary><b>Diagrama de Classes (Clique para expandir)</b></summary>
   
    
-                                                   Diagrama
+                                              Clique na foto para melhor visualização
   
   ![img](https://i.imgur.com/wXN7Bae.jpg)
 

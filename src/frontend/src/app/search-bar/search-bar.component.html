@@ -90,34 +90,11 @@
 
     <mat-sidenav-content >
 
+
+
+
+
       <div id="card-container">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Celta</mat-card-title>
-            <mat-card-subtitle>2.0 valendo</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="assets/celta.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
-            <p>
-             Celtinha bombando.
-             Celtinha bombando.
-             Celtinha bombando.
-             Celtinha bombando.
-             Celtinha bombando.
-
-             Celtinha bombando.
-
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button  mat-raised-button color ="warn">Ver</button>
-          </mat-card-actions>
-          <mat-card-footer >RS$ 500000 </mat-card-footer>
-
-        </mat-card>
-
-
       <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
@@ -130,15 +107,10 @@
            Celtinha bombando.
            Celtinha bombando.
            Celtinha bombando.
-           Celtinha bombando.
-           Celtinha bombando.
-
-           Celtinha bombando.
-
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button  mat-raised-button color ="warn">Ver</button>
+          <button  [routerLink]="['/anuncio']" mat-raised-button color ="warn">Ver</button>
         </mat-card-actions>
         <mat-card-footer >RS$ 500000 </mat-card-footer>
 
@@ -148,5 +120,12 @@
 
 
     </mat-sidenav-content>
+
+
+
+
+
+
+
   </mat-sidenav-container>
 

@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { AnuncioComponent } from './anuncio/anuncio.component';
 
 
 
@@ -23,7 +24,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     LoginComponent,
     HeaderComponent,
     FirstPageComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    AnuncioComponent
   ],
   imports: [
     BrowserModule,

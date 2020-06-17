@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatButtonModule } from '@angular/material';
+import {
+  MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule,
+  MatListModule, MatToolbarModule, MatCardModule, MatFormFieldModule,
+  MatInputModule, MatSelectModule, MatCheckboxModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -10,13 +13,19 @@ import { LoginService } from './login/login.service';
 import { HeaderComponent } from './header/header.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { AnuncioComponent } from './anuncio/anuncio.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    SearchBarComponent,
+    AnuncioComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatNativeDateModule, MatIconModule, MatSidenavModule,
+    MatListModule, MatCardModule, MatFormFieldModule, MatInputModule,
+    MatSelectModule, MatCheckboxModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

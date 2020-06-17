@@ -3,6 +3,7 @@ package com.project.app.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,6 +19,10 @@ public class User {
         String name;
         String email;
         String password;
-        
+        String contact;
+        String city;
+
+        //List<String> lastSearchs;
+
 
 }

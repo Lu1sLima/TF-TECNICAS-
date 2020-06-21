@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule,
   MatListModule, MatToolbarModule, MatCardModule, MatFormFieldModule,
-  MatInputModule, MatSelectModule, MatCheckboxModule} from '@angular/material';
+  MatInputModule, MatSelectModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -38,7 +38,7 @@ import { AnuncioComponent } from './anuncio/anuncio.component';
     MatSidenavModule,
     MatNativeDateModule, MatIconModule, MatSidenavModule,
     MatListModule, MatCardModule, MatFormFieldModule, MatInputModule,
-    MatSelectModule, MatCheckboxModule
+    MatSelectModule, MatCheckboxModule, MatGridListModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

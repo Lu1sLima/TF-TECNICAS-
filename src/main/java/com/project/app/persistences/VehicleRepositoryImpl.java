@@ -5,7 +5,6 @@ import com.project.app.repositories.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -19,5 +18,13 @@ public abstract class VehicleRepositoryImpl implements VehicleRepository {
         return vehicleRepository.findById(Id);
     }
 
+    @Override
+    public Vehicle findByPlaca(String placa) {
+        return vehicleRepository.findByPlaca(placa);
+    }
 
+    @Override
+    public Vehicle save(Vehicle vehicle) {
+        return vehicleRepository.save(vehicle);
+    }
 }

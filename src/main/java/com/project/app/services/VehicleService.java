@@ -13,7 +13,13 @@ public class VehicleService {
     @Autowired
     VehicleRepository vehicleRepository;
 
+    public Vehicle findVehicleByPlaca(String placa){
+        return vehicleRepository.findByPlaca(placa);
+    }
+
     public Optional<Vehicle> findVehicleById(Long id){
         return vehicleRepository.findById(id);
     }
+    
+    public Vehicle addVehicle(Vehicle vehicle){ return vehicleRepository.save(vehicle);}
 }

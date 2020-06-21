@@ -17,12 +17,22 @@ public class User {
         Long id;
 
         String name;
+        @Column(unique=true)
         String email;
+
         String password;
         String contact;
         String city;
 
         //List<String> lastSearchs;
+
+        public User(String name, String email, String password, String contact,String city){
+                this.name = name;
+                this.email = email;
+                this.password = password;
+                this.contact = contact;
+                this.city = city;
+        }
 
 
 }

@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserServiceTest {
+public class UserTest {
 
     @Autowired
     UserService userService;
@@ -28,6 +28,12 @@ public class UserServiceTest {
         userService.addUser(user);
 
         Assert.assertEquals("test",userService.findUserByEmail("test@test.com").getName());
+        Assert.assertEquals("test@test.com",userService.findUserByEmail("test@test.com").getEmail());
+        Assert.assertEquals("test",userService.findUserByEmail("test@test.com").getPassword());
+        Assert.assertEquals("5132433233",userService.findUserByEmail("test@test.com").getContact());
+        Assert.assertEquals("POA",userService.findUserByEmail("test@test.com").getCity());
+
+
     }
 
     @Test

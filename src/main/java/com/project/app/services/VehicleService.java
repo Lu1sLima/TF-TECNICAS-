@@ -4,6 +4,7 @@ import com.project.app.entities.Vehicle;
 import com.project.app.repositories.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -20,6 +21,6 @@ public class VehicleService {
     public Optional<Vehicle> findVehicleById(Long id){
         return vehicleRepository.findById(id);
     }
-    
+
     public Vehicle addVehicle(Vehicle vehicle){ return vehicleRepository.save(vehicle);}
 }

@@ -13,14 +13,21 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class VehicleServiceTest {
+public class VehicleTest {
 
     @Autowired
     VehicleService vehicleService;
 
     @Test
     public void ShouldAddVehicle(){
-        Vehicle vehicle = new Vehicle("12345","fusca", Tipo.Sedan, Marca.Chevrolet, (double) 1500);
+        Vehicle vehicle = new Vehicle.Builder()
+                .placa("12345")
+                .modelo("fusca")
+                .marca(Marca.Chevrolet)
+                .tipo(Tipo.Hatch)
+                .preco(25000D)
+                .build();
+        System.out.println(vehicle);
         vehicleService.addVehicle(vehicle);
         Vehicle expected = vehicleService.findVehicleByPlaca("12345");
         Assert.assertEquals("fusca",expected.getModelo());

@@ -1,12 +1,10 @@
-package com.project.app.services;
+package com.project.app.CasosDeUso.Servicos;
 
-import com.project.app.entities.Anuncio;
-import com.project.app.entities.User;
-import com.project.app.persistences.AnuncioRepositoryImpl;
-import com.project.app.repositories.AnuncioRepository;
+import com.project.app.Entidades.Anuncio;
+import com.project.app.Entidades.User;
+import com.project.app.CasosDeUso.Repositorios.AnuncioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;

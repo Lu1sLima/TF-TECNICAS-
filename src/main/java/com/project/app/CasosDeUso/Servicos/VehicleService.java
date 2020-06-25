@@ -1,10 +1,9 @@
-package com.project.app.services;
+package com.project.app.CasosDeUso.Servicos;
 
-import com.project.app.entities.Vehicle;
-import com.project.app.repositories.VehicleRepository;
+import com.project.app.Entidades.Vehicle;
+import com.project.app.CasosDeUso.Repositorios.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 

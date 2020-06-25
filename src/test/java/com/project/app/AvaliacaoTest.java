@@ -1,14 +1,12 @@
 package com.project.app;
 
-import com.project.app.entities.*;
-import com.project.app.services.AnuncioService;
-import com.project.app.services.AvaliacaoService;
-import com.project.app.services.UserService;
-import com.project.app.services.VehicleService;
+import com.project.app.Entidades.*;
+import com.project.app.CasosDeUso.Servicos.AnuncioService;
+import com.project.app.CasosDeUso.Servicos.AvaliacaoService;
+import com.project.app.CasosDeUso.Servicos.UserService;
+import com.project.app.CasosDeUso.Servicos.VehicleService;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

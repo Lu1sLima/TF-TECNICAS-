@@ -1,7 +1,7 @@
-package com.project.app.persistences;
+package com.project.app.Interfaces.RepositoriosImpl;
 
-import com.project.app.repositories.UserRepository;
-import com.project.app.entities.User;
+import com.project.app.CasosDeUso.Repositorios.UserRepository;
+import com.project.app.Entidades.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

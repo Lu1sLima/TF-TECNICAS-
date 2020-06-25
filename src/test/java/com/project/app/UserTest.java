@@ -1,7 +1,7 @@
 package com.project.app;
 
-import com.project.app.entities.User;
-import com.project.app.services.UserService;
+import com.project.app.Entidades.User;
+import com.project.app.CasosDeUso.Servicos.UserService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

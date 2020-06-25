@@ -1,4 +1,4 @@
-package com.project.app.entities;
+package com.project.app.Entidades;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
-import java.util.Optional;
 
 @Getter
 @Setter

@@ -1,9 +1,9 @@
 package com.project.app;
 
-import com.project.app.entities.Marca;
-import com.project.app.entities.Tipo;
-import com.project.app.entities.Vehicle;
-import com.project.app.services.VehicleService;
+import com.project.app.Entidades.Marca;
+import com.project.app.Entidades.Tipo;
+import com.project.app.Entidades.Vehicle;
+import com.project.app.CasosDeUso.Servicos.VehicleService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

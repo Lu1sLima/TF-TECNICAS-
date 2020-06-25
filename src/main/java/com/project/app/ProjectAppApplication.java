@@ -1,16 +1,11 @@
 package com.project.app;
 
 
-import com.project.app.entities.User;
-import com.project.app.entities.Vehicle;
-import com.project.app.repositories.VehicleRepository;
-import com.project.app.services.VehicleService;
+import com.project.app.CasosDeUso.Servicos.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.Optional;
 
 
 @SpringBootApplication

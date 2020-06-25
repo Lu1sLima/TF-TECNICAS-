@@ -1,9 +1,9 @@
-package com.project.app.persistences;
+package com.project.app.Interfaces.RepositoriosImpl;
 
-import com.project.app.entities.Anuncio;
-import com.project.app.entities.Avaliacao;
-import com.project.app.entities.User;
-import com.project.app.repositories.AvaliacaoRepository;
+import com.project.app.Entidades.Anuncio;
+import com.project.app.Entidades.Avaliacao;
+import com.project.app.Entidades.User;
+import com.project.app.CasosDeUso.Repositorios.AvaliacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.project.app.persistences;
+package com.project.app.Interfaces.RepositoriosImpl;
 
-import com.project.app.entities.Vehicle;
-import com.project.app.repositories.VehicleRepository;
+import com.project.app.Entidades.Vehicle;
+import com.project.app.CasosDeUso.Repositorios.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

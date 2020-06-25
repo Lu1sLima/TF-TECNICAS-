@@ -1,8 +1,8 @@
-package com.project.app.repositories;
+package com.project.app.CasosDeUso.Repositorios;
 
-import com.project.app.entities.Anuncio;
-import com.project.app.entities.Avaliacao;
-import com.project.app.entities.User;
+import com.project.app.Entidades.Anuncio;
+import com.project.app.Entidades.Avaliacao;
+import com.project.app.Entidades.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

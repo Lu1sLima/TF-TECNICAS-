@@ -1,6 +1,6 @@
-package com.project.app.repositories;
+package com.project.app.CasosDeUso.Repositorios;
 
-import com.project.app.entities.Vehicle;
+import com.project.app.Entidades.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

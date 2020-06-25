@@ -10,7 +10,6 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Avaliacao {
@@ -29,10 +28,22 @@ public class Avaliacao {
     int pontuacao;
 
     public Avaliacao(Anuncio anuncio, User user, String comentario, int pontuacao) {
-        this.pontuacao = pontuacao;
+        if(pontuacao < 0 || pontuacao > 5){
+            throw new IllegalArgumentException("Pontuacao inválida");
+        }else{
+            this.pontuacao = pontuacao;
+        }
         this.anuncio = anuncio;
         this.user = user;
         this.comentario = comentario;
+    }
+
+    public void setPontuacao(int pontuacao){
+        if(pontuacao < 0 || pontuacao > 5){
+            throw new IllegalArgumentException("Pontuacao inválida");
+        }else{
+            this.pontuacao = pontuacao;
+        }
     }
 
 

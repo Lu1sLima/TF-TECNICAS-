@@ -7,6 +7,7 @@ import com.project.app.CasosDeUso.Servicos.UserService;
 import com.project.app.CasosDeUso.Servicos.VehicleService;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,6 +32,64 @@ public class AvaliacaoTest {
     Anuncio anuncio;
 
 
+
+    @Test
+    public void shouldCreateAvaliacao(){
+        User user = new User("Tester","email@email","passwordTest","4342423","POA");
+        Vehicle vehicle = new Vehicle.Builder()
+                .placa("12345784")
+                .modelo("fusca")
+                .marca(Marca.Chevrolet)
+                .tipo(Tipo.Hatch)
+                .preco(25000D)
+                .build();
+        Anuncio anuncio = new Anuncio(user, "teste anuncio", "teste description", vehicle);
+
+        Avaliacao avaliacao = new Avaliacao(anuncio,user,"muito tri",5);
+
+        Assert.assertEquals("teste anuncio", avaliacao.getAnuncio().getTitle());
+        Assert.assertEquals("Tester", avaliacao.getUser().getName());
+        Assert.assertEquals("muito tri", avaliacao.getComentario());
+        Assert.assertEquals(5, avaliacao.getPontuacao());
+    }
+
+    @Test
+    public void shouldNotCreateAvaliacaoWithPontuacaoBiggerThan5(){
+        User user = new User("Tester","email@email","passwordTest","4342423","POA");
+        Vehicle vehicle = new Vehicle.Builder()
+                .placa("12345784")
+                .modelo("fusca")
+                .marca(Marca.Chevrolet)
+                .tipo(Tipo.Hatch)
+                .preco(25000D)
+                .build();
+        Anuncio anuncio = new Anuncio(user, "teste anuncio", "teste description", vehicle);
+
+
+        Assert.assertThrows( IllegalArgumentException.class,() -> {
+            Avaliacao avaliacao = new Avaliacao(anuncio,user,"muito tri",6);
+        });
+    }
+
+    @Test
+    public void shouldNotSetAvaliacaoWithPontuacaoBiggerThan5(){
+        User user = new User("Tester","email@email","passwordTest","4342423","POA");
+        Vehicle vehicle = new Vehicle.Builder()
+                .placa("12345784")
+                .modelo("fusca")
+                .marca(Marca.Chevrolet)
+                .tipo(Tipo.Hatch)
+                .preco(25000D)
+                .build();
+        Anuncio anuncio = new Anuncio(user, "teste anuncio", "teste description", vehicle);
+        Avaliacao avaliacao = new Avaliacao(anuncio,user,"muito tri",5);
+
+        IllegalArgumentException exception = Assert.assertThrows( IllegalArgumentException.class,() -> {
+           avaliacao.setPontuacao(6);
+        });
+
+        Assert.assertEquals("Pontuacao inválida",exception.getMessage());
+    }
 
     @Test
     public void shouldAddAvaliacao(){

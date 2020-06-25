@@ -1,9 +1,6 @@
 package com.project.app;
 
-import com.project.app.Entidades.Anuncio;
-import com.project.app.Entidades.Marca;
-import com.project.app.Entidades.Tipo;
-import com.project.app.Entidades.Vehicle;
+import com.project.app.Entidades.*;
 import com.project.app.CasosDeUso.Servicos.AnuncioService;
 import com.project.app.CasosDeUso.Servicos.UserService;
 import com.project.app.CasosDeUso.Servicos.VehicleService;
@@ -18,21 +15,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class AnuncioTest {
 
-    @Autowired
-    AnuncioService anuncioService;
-
-    @Autowired
-    UserService userService;
-
-    @Autowired
-    VehicleService vehicleService;
-
-
-    //dummyline4
 
 
     @Test
-    public void shouldAddAnuncio() {
+    public void shouldCreateAnuncio() {
+        User user = new User("Tester","email@email","passwordTest","4342423","POA");
+
         Vehicle vehicle = new Vehicle.Builder()
                 .placa("123457")
                 .modelo("fusca")
@@ -41,41 +29,41 @@ public class AnuncioTest {
                 .preco(25000D)
                 .build();
 
-        vehicleService.addVehicle(vehicle);
 
-        Anuncio anuncio = anuncioService.addAnuncio(
-                new Anuncio(userService.findUserByEmail("admin@admin.com"), "teste anuncio",
-                        "teste description", vehicleService.findVehicleByPlaca("123457"))
-        );
-        Assert.assertEquals("teste anuncio", anuncioService.findById(anuncio.getId()).get().getTitle());
 
-        Assert.assertEquals("123457", anuncioService.findById(anuncio.getId()).get().getVehicle().getPlaca());
+        Anuncio anuncio = new Anuncio(user, "teste anuncio", "teste description", vehicle);
 
+        anuncio.setDescription("teste description2");
+
+        Assert.assertEquals("Tester",anuncio.getUser().getName());
+        Assert.assertEquals("teste anuncio",anuncio.getTitle());
+        Assert.assertEquals("teste description2", anuncio.getDescription());
+        Assert.assertEquals("fusca", anuncio.getVehicle().getModelo());
     }
 
-    @Test
-    public void shouldGetAllAnunciosByUser() {
-        Vehicle vehicle = new Vehicle.Builder()
-                .placa("1234578")
-                .modelo("fusca")
-                .marca(Marca.Chevrolet)
-                .tipo(Tipo.Hatch)
-                .preco(25000D)
-                .build();
-
-        vehicleService.addVehicle(vehicle);
-
-        Anuncio anuncio = anuncioService.addAnuncio(
-                new Anuncio(userService.findUserByEmail("admin@admin.com"), "teste anuncio",
-                        "teste description", vehicleService.findVehicleByPlaca("1234578"))
-        );
-
-        Anuncio anuncio2 = anuncioService.addAnuncio(
-                new Anuncio(userService.findUserByEmail("admin@admin.com"), "teste anuncio",
-                        "teste description", vehicleService.findVehicleByPlaca("123"))
-        );
-
-
-        Assert.assertTrue(anuncioService.findAllByUser(userService.findUserByEmail("admin@admin.com")).size() >= 2);
-    }
+//    @Test
+//    public void shouldGetAllAnunciosByUser() {
+//        Vehicle vehicle = new Vehicle.Builder()
+//                .placa("1234578")
+//                .modelo("fusca")
+//                .marca(Marca.Chevrolet)
+//                .tipo(Tipo.Hatch)
+//                .preco(25000D)
+//                .build();
+//
+//        vehicleService.addVehicle(vehicle);
+//
+//        Anuncio anuncio = anuncioService.addAnuncio(
+//                new Anuncio(userService.findUserByEmail("admin@admin.com"), "teste anuncio",
+//                        "teste description", vehicleService.findVehicleByPlaca("1234578"))
+//        );
+//
+//        Anuncio anuncio2 = anuncioService.addAnuncio(
+//                new Anuncio(userService.findUserByEmail("admin@admin.com"), "teste anuncio",
+//                        "teste description", vehicleService.findVehicleByPlaca("123"))
+//        );
+//
+//
+//        Assert.assertTrue(anuncioService.findAllByUser(userService.findUserByEmail("admin@admin.com")).size() >= 2);
+//    }
 }

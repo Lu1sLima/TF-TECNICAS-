@@ -1,3 +1,4 @@
+import { GuardService } from './login/guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {
@@ -40,7 +41,7 @@ import { AnuncioComponent } from './anuncio/anuncio.component';
     MatListModule, MatCardModule, MatFormFieldModule, MatInputModule,
     MatSelectModule, MatCheckboxModule, MatGridListModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, GuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

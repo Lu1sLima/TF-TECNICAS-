@@ -1,6 +1,6 @@
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
@@ -10,6 +10,9 @@ import { Observable, throwError } from 'rxjs';
 @Injectable()
 export class LoginService{
   private apiUrl = 'http://localhost:4200/api';
+
+  usuarioAutenticado: boolean = false;
+  mostrarMenu =  new EventEmitter<boolean>();
 
   constructor(private http: HttpClient){
 
@@ -31,6 +34,10 @@ export class LoginService{
       console.log(errorMessage);
       return throwError(errorMessage);
     };
+
+    userAutenticado(){
+      return this.usuarioAutenticado;
+    }
 
 
 }

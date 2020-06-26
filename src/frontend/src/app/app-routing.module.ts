@@ -1,3 +1,4 @@
+import { GuardService } from './login/guard.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -7,9 +8,9 @@ import { AnuncioComponent } from './anuncio/anuncio.component';
 
 
 const routes: Routes = [
-  { path: '', component: SearchBarComponent },
+  { path: '', component: SearchBarComponent , canActivate: [GuardService]},
   { path: 'login', component: LoginComponent },
-  { path: 'anuncio', component: AnuncioComponent }
+  { path: 'anuncio', component: AnuncioComponent, canActivate: [GuardService]}
 
 ];
 

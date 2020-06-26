@@ -13,6 +13,8 @@ export class LoginService{
 
   usuarioAutenticado: boolean = false;
   mostrarMenu =  new EventEmitter<boolean>();
+  userName =  new EventEmitter<string>();
+
 
   constructor(private http: HttpClient){
 

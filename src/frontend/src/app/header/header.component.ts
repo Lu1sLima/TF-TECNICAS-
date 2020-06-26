@@ -9,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   mostrarMenu: boolean = false;
+  username: string
   constructor(private loginService: LoginService) { }
 
   ngOnInit() {
     this.loginService.mostrarMenu.subscribe(mostrar => this.mostrarMenu = mostrar);
+    this.loginService.userName.subscribe(name => this.username = name);
+
   }
 
 }

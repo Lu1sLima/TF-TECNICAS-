@@ -25,7 +25,6 @@ public class VehicleTest {
                 .modelo("fusca")
                 .marca(Marca.Chevrolet)
                 .tipo(Tipo.Hatch)
-                .preco(25000D)
                 .build();
         System.out.println(vehicle);
         vehicleService.addVehicle(vehicle);

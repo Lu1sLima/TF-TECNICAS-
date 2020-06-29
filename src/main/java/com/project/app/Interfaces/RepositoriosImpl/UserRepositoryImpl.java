@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Id;
+import java.util.Optional;
 
 @Repository
 public abstract class UserRepositoryImpl implements UserRepository {
@@ -14,7 +15,7 @@ public abstract class UserRepositoryImpl implements UserRepository {
     private UserRepository userRepository;
 
     @Override
-    public User findById(Id id) {
+    public Optional<User> findById(Long id) {
         return userRepository.findById(id);
     }
 

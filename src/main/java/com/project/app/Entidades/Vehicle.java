@@ -19,7 +19,7 @@ public class Vehicle {
     private String modelo;
     private Tipo tipo;
     private Marca marca;
-    private Double preco;
+
 
     public static class Builder {
 
@@ -27,7 +27,6 @@ public class Vehicle {
         private String modelo;
         private Tipo tipo;
         private Marca marca;
-        private Double preco;
 
         public Builder placa(String digitaPlaca) {
             placa = digitaPlaca;
@@ -49,10 +48,6 @@ public class Vehicle {
             return this;
         }
 
-        public Builder preco(Double digitaPreco) {
-            preco = digitaPreco;
-            return this;
-        }
 
         public Vehicle build() {
             return new Vehicle(this);
@@ -67,7 +62,6 @@ public class Vehicle {
         modelo = builder.modelo;
         tipo = builder.tipo;
         marca = builder.marca;
-        preco = builder.preco;
 
     }
 

@@ -25,7 +25,7 @@ public class Anuncio {
 
     String description;
 
-
+    Double preco;
 
     //Byte imagem; learn how to do
 
@@ -33,12 +33,12 @@ public class Anuncio {
     @JoinColumn(name = "vehicle_id")
     Vehicle vehicle;
 
-    public Anuncio(User user, String title, String description, Vehicle vehicle){
+    public Anuncio(User user, String title, String description, Vehicle vehicle, Double preco){
         this.user = user;
         this.title = title;
         this.description = description;
         this.vehicle = vehicle;
-
+        this.preco = preco;
     }
 
 

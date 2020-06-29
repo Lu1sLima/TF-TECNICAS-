@@ -1,5 +1,6 @@
 package com.project.app;
 
+import com.project.app.CasosDeUso.Repositorios.UserRepository;
 import com.project.app.Entidades.*;
 import com.project.app.CasosDeUso.Servicos.AnuncioService;
 import com.project.app.CasosDeUso.Servicos.UserService;
@@ -11,10 +12,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class AnuncioTest {
 
+    @Autowired
+    UserService userService;
+
+    @Autowired
+    AnuncioService anuncioService;
 
 
     @Test
@@ -26,12 +35,11 @@ public class AnuncioTest {
                 .modelo("fusca")
                 .marca(Marca.Chevrolet)
                 .tipo(Tipo.Hatch)
-                .preco(25000D)
                 .build();
 
 
 
-        Anuncio anuncio = new Anuncio(user, "teste anuncio", "teste description", vehicle);
+        Anuncio anuncio = new Anuncio(user, "teste anuncio", "teste description", vehicle, 2500D);
 
         anuncio.setDescription("teste description2");
 
@@ -39,6 +47,16 @@ public class AnuncioTest {
         Assert.assertEquals("teste anuncio",anuncio.getTitle());
         Assert.assertEquals("teste description2", anuncio.getDescription());
         Assert.assertEquals("fusca", anuncio.getVehicle().getModelo());
+    }
+
+    @Test
+    public void shouldGetAllAnunciosByUser(){
+        List<Anuncio> anunciosByUser = new ArrayList<>();
+        User user1 = userService.findById(1L);
+        anunciosByUser = anuncioService.findAllByUser(user1);
+        Assert.assertTrue(anunciosByUser.size() > 1);
+
+
     }
 
 //    @Test

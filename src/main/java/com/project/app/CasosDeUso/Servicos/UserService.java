@@ -22,6 +22,11 @@ public class UserService {
         return userSalvo;
     }
 
+    public User findById(Long id){
+        User user = userRepository.findById(id).get();
+        return user;
+    }
+
     public Boolean autenticaUser(String email, String password){
         User user = userRepository.findByEmail(email);
         if(user!= null){

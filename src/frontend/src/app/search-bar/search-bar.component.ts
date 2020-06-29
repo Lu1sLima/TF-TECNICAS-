@@ -1,4 +1,4 @@
-import { AnuncioService } from './../anuncio/anuncio.service';
+import { AnuncioService } from '../anuncio/anuncio.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

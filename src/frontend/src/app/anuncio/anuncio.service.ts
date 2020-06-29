@@ -1,0 +1,34 @@
+import { catchError } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { HttpErrorResponse, HttpClient } from '@angular/common/http';
+import { throwError } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnuncioService {
+
+  private apiUrl = 'http://localhost:4200/api';
+
+
+  constructor(private http: HttpClient) { }
+
+  findAllAnuncios(){
+    return this.http.get(this.apiUrl + 'anuncio/findAll/').pipe(catchError(this.handleError));
+  }
+
+    handleError(error: HttpErrorResponse) {
+      let errorMessage = '';
+      if (error.error instanceof ErrorEvent) {
+        // Erro ocorreu no lado do client
+        errorMessage = error.error.message;
+      } else {
+        // Erro ocorreu no lado do servidor
+        errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
+      }
+      console.log(errorMessage);
+      return throwError(errorMessage);
+    };
+
+
+}

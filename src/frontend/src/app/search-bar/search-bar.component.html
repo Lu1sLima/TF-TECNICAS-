@@ -95,24 +95,22 @@
 
 
       <div id="card-container">
-      <mat-card class="example-card">
-        <mat-card-header>
+      <mat-card *ngFor="let anuncio of anuncios" class="example-card" >
+        <mat-card-header >
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Celta</mat-card-title>
-          <mat-card-subtitle>2.0 valendo</mat-card-subtitle>
+          <mat-card-title>{{anuncio.title}}</mat-card-title>
+          <mat-card-subtitle>{{anuncio.description}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="assets/celta.jpg" alt="Photo of a Shiba Inu">
         <mat-card-content>
           <p>
-           Celtinha bombando.
-           Celtinha bombando.
-           Celtinha bombando.
+           {{anuncio.description}}
           </p>
         </mat-card-content>
         <mat-card-actions>
           <button  [routerLink]="['/anuncio']" mat-raised-button color ="warn">Ver</button>
         </mat-card-actions>
-        <mat-card-footer >RS$ 500000 </mat-card-footer>
+        <mat-card-footer >${{anuncio.preco}} </mat-card-footer>
 
       </mat-card>
 

@@ -1,3 +1,4 @@
+import { AnuncioService } from './../anuncio/anuncio.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  anuncios: any;
+
+  constructor(private anuncioService: AnuncioService) { }
 
   ngOnInit() {
+     this.anuncioService.findAllAnuncios().subscribe(
+       res => {
+       console.log(res);
+       this.anuncios = res;
+       console.log(this.anuncios);
+       }
+
+     );
+
   }
 
 }

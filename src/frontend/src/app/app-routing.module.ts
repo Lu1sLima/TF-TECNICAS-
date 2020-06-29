@@ -8,7 +8,8 @@ import { AnuncioComponent } from './anuncio/anuncio.component';
 
 
 const routes: Routes = [
-  { path: '', component: SearchBarComponent , canActivate: [GuardService]},
+  { path: '', component: FirstPageComponent, canActivate: [GuardService]},
+  { path: 'verAnuncios', component: SearchBarComponent , canActivate: [GuardService]},
   { path: 'login', component: LoginComponent },
   { path: 'anuncio', component: AnuncioComponent, canActivate: [GuardService]}
 

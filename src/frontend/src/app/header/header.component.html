@@ -1,8 +1,8 @@
 <mat-toolbar *ngIf="mostrarMenu"  color ="primary" class="mat-elevation-z20">
 <span>SalesProject</span>
 <div class= "spacer"></div>
+<a>Bem vindo {{username}}</a>
 <a mat-button [routerLink]="['/verAnuncios']">Ver anuncios</a>
 <a mat-button>Vender</a>
-<span>{{username}}</span>
-<a mat-raised-button color ="accent">Logout</a>
+<a mat-button>Logout</a>
 </mat-toolbar>

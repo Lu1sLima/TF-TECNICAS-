@@ -1,5 +1,6 @@
 package com.project.app.Entidades;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,6 +20,7 @@ public class Vehicle {
     private String modelo;
     private Tipo tipo;
     private Marca marca;
+    private Boolean novo;
 
 
     public static class Builder {
@@ -27,6 +29,7 @@ public class Vehicle {
         private String modelo;
         private Tipo tipo;
         private Marca marca;
+        private Boolean novo;
 
         public Builder placa(String digitaPlaca) {
             placa = digitaPlaca;
@@ -48,6 +51,11 @@ public class Vehicle {
             return this;
         }
 
+        public Builder novo(Boolean digitaNovo) {
+            novo = digitaNovo;
+            return this;
+        }
+
 
         public Vehicle build() {
             return new Vehicle(this);
@@ -62,6 +70,7 @@ public class Vehicle {
         modelo = builder.modelo;
         tipo = builder.tipo;
         marca = builder.marca;
+        novo = builder.novo;
 
     }
 

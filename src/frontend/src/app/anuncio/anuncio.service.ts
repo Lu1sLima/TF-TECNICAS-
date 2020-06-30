@@ -21,6 +21,11 @@ export class AnuncioService {
     return this.http.get(this.apiUrl + 'anuncio/' + `${id}`).pipe(catchError(this.handleError));
   }
 
+  findAllMarcas(){
+    return this.http.get(this.apiUrl + 'marcas').pipe(catchError(this.handleError));
+
+  }
+
 
 
     handleError(error: HttpErrorResponse) {

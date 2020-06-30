@@ -30,6 +30,10 @@ export class AnuncioService {
     return this.http.get(this.apiUrl + '/anuncio/avaliacoes/' + `${id}`).pipe(catchError(this.handleError));
   }
 
+  createAvaliacao(anuncioId, userId, comentario: string, pontuacao: number){
+    return this.http.post(this.apiUrl + '/anuncio/avaliacoes/' + `${anuncioId}` + "/" +  `${userId}` + "/" + `${comentario}` + "/" + `${pontuacao}`, null ).pipe(catchError(this.handleError)).subscribe();
+  }
+
 
 
     handleError(error: HttpErrorResponse) {

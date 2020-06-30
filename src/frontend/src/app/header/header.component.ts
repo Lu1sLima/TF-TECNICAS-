@@ -8,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
   mostrarMenu: boolean = false;
   username: string
+  userid: string
   constructor(private loginService: LoginService) { }
 
   ngOnInit() {
     this.loginService.mostrarMenu.subscribe(mostrar => this.mostrarMenu = mostrar);
     this.loginService.userName.subscribe(name => this.username = name);
+    this.loginService.userId.subscribe(name => this.userid = name);
+
 
   }
 
@@ -22,5 +26,6 @@ export class HeaderComponent implements OnInit {
   refresh(){
     window.location.reload();
   }
+
 
 }

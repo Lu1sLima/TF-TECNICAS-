@@ -1,3 +1,5 @@
+import { LoginService } from './../login/login.service';
+import { LoginComponent } from './../login/login.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AnuncioService } from './anuncio.service';
@@ -16,15 +18,17 @@ export class AnuncioComponent implements OnInit {
   id: string;
   anuncio: any;
   avaliacoes: any;
-
+  userId: string;
   dataSource: any;
 
 
 
   constructor(private route: ActivatedRoute,private anuncioService: AnuncioService,
-    public dialog: MatDialog) { }
+    public dialog: MatDialog, private loginService: LoginService) { }
 
   ngOnInit() {
+    console.log(this.loginService.userId);
+
     this.id = this.route.snapshot.params['id'];
     this.anuncioService.findById(this.id).subscribe(
       res => {
@@ -32,6 +36,7 @@ export class AnuncioComponent implements OnInit {
         console.log(this.anuncio);
       }
     )
+
 
     this.anuncioService.findAllAvaliacoes(this.id).subscribe(
       res => {
@@ -41,13 +46,17 @@ export class AnuncioComponent implements OnInit {
       }
     )
 
+
+
   }
 
   openDialog(){
     const dialogRef = this.dialog.open(DialogComponent, {
+      data: {anuncioId: this.id,
+        userId: this.userId
+
+      }
     });
-
-
   }
 
 

@@ -22,9 +22,18 @@ export class LoginComponent implements OnInit {
     this.loginService.autenticaLogin(this.user, this.password).subscribe(
       res => {
       console.log(res);
+
+        this.loginService.userId2 = res['id'];
+
         this.loginService.usuarioAutenticado = true;
+
         this.loginService.mostrarMenu.emit(true);
+
         this.loginService.userName.emit(res['name']);
+
+        this.loginService.userId.emit(res['id']);
+
+
         this.router.navigate(['/']);
       },
       err => {
@@ -33,6 +42,8 @@ export class LoginComponent implements OnInit {
         this.loginService.mostrarMenu.emit(false);
       console.log(err);
       });
+
+
 
  }
 }

@@ -2,9 +2,8 @@ package com.project.app.Interfaces.Controllers;
 
 import com.project.app.CasosDeUso.Servicos.AnuncioService;
 import com.project.app.Entidades.Anuncio;
+import com.project.app.Entidades.Marca;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,5 +26,10 @@ public class AnuncioController {
     @GetMapping(value = "/anuncio/{id}")
     public Anuncio findById(@PathVariable Long id){
         return anuncioService.findById(id).get();
+    }
+
+    @GetMapping(value = "/marcas")
+    public Marca[] findAllMarcas(){
+        return Marca.values();
     }
 }

@@ -14,6 +14,9 @@ export class LoginService{
   usuarioAutenticado: boolean = false;
   mostrarMenu =  new EventEmitter<boolean>();
   userName =  new EventEmitter<string>();
+  userId =  new EventEmitter<string>();
+  public userId2: string;
+
 
 
   constructor(private http: HttpClient){
@@ -40,6 +43,10 @@ export class LoginService{
     userAutenticado(){
       return this.usuarioAutenticado;
     }
+
+
+
+
 
 
 }

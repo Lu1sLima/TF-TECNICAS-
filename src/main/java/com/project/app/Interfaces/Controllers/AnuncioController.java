@@ -2,14 +2,13 @@ package com.project.app.Interfaces.Controllers;
 
 import com.project.app.CasosDeUso.Servicos.AnuncioService;
 import com.project.app.CasosDeUso.Servicos.AvaliacaoService;
+import com.project.app.CasosDeUso.Servicos.UserService;
 import com.project.app.Entidades.Anuncio;
 import com.project.app.Entidades.Avaliacao;
 import com.project.app.Entidades.Marca;
+import com.project.app.Entidades.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +21,9 @@ public class AnuncioController {
 
     @Autowired
     AvaliacaoService avaliacaoService;
+
+    @Autowired
+    UserService userService;
 
     @GetMapping(value = "/anuncio/findAll")
     public List<Anuncio> findAllAnuncios() {
@@ -42,5 +44,15 @@ public class AnuncioController {
     public List<Avaliacao> findAllAvaliacoesByIdOfAnuncio(@PathVariable Long id){
         Anuncio anuncio = anuncioService.findById(id).get();
         return avaliacaoService.findAllByAnuncio(anuncio);
+    }
+
+    @PostMapping(value = "/anuncio/avaliacoes/{anuncioId}/{userId}/{comentario}/{pontuacao}")
+    public Avaliacao createAvaliacao(@PathVariable long anuncioId, @PathVariable long userId,
+                                     @PathVariable String comentario,@PathVariable int pontuacao
+                                     ){
+        Anuncio anuncio = anuncioService.findById(anuncioId).get();
+        User user = userService.findById(userId);
+        Avaliacao avaliacao = new Avaliacao(anuncio,user,comentario,pontuacao);
+        return avaliacaoService.addAvaliacao(avaliacao);
     }
 }

@@ -8,7 +8,7 @@
             <!-- [(ngModel)]="selectedValue"  put this in mat-option after integration with backend -->
             <mat-label>Marca</mat-label>
             <mat-select [(ngModel)]="selectedMarca" name="marcas">
-              <mat-option *ngFor="let marca of marcas" (click) ="getAnunciosByFilters()" value = {{marca}}>
+              <mat-option *ngFor="let marca of marcas" (click) ="getAnunciosByFilters()"value = {{marca}}>
                 {{marca}}
               </mat-option>
             </mat-select>

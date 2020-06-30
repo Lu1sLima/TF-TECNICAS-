@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule,
   MatListModule, MatToolbarModule, MatCardModule, MatFormFieldModule,
-  MatInputModule, MatSelectModule, MatCheckboxModule, MatGridListModule, MatRadioModule} from '@angular/material';
+  MatInputModule, MatSelectModule, MatCheckboxModule, MatGridListModule, MatRadioModule,MatTableModule,MatDialogModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +16,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AnuncioComponent } from './anuncio/anuncio.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 
@@ -26,8 +27,10 @@ import { AnuncioComponent } from './anuncio/anuncio.component';
     HeaderComponent,
     FirstPageComponent,
     SearchBarComponent,
-    AnuncioComponent
+    AnuncioComponent,
+    DialogComponent
   ],
+  entryComponents: [DialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,7 +42,8 @@ import { AnuncioComponent } from './anuncio/anuncio.component';
     MatSidenavModule,
     MatNativeDateModule, MatIconModule, MatSidenavModule,
     MatListModule, MatCardModule, MatFormFieldModule, MatInputModule,
-    MatSelectModule, MatCheckboxModule, MatGridListModule,MatRadioModule
+    MatSelectModule, MatCheckboxModule, MatGridListModule,
+    MatRadioModule,MatTableModule,MatDialogModule
   ],
   providers: [LoginService, GuardService],
   bootstrap: [AppComponent]

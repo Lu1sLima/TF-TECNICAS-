@@ -26,6 +26,10 @@ export class AnuncioService {
 
   }
 
+  findAllAvaliacoes(id){
+    return this.http.get(this.apiUrl + '/anuncio/avaliacoes/' + `${id}`).pipe(catchError(this.handleError));
+  }
+
 
 
     handleError(error: HttpErrorResponse) {

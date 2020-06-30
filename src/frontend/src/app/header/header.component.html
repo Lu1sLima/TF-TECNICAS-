@@ -4,5 +4,5 @@
 <a>Bem vindo {{username}}</a>
 <a mat-button [routerLink]="['/verAnuncios']">Ver anuncios</a>
 <a mat-button>Vender</a>
-<a mat-button>Logout</a>
+<a mat-button (click)="refresh()" >Logout</a>
 </mat-toolbar>

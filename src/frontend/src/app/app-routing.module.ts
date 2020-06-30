@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: '', component: FirstPageComponent, canActivate: [GuardService]},
   { path: 'verAnuncios', component: SearchBarComponent , canActivate: [GuardService]},
   { path: 'login', component: LoginComponent },
-  { path: 'anuncio', component: AnuncioComponent, canActivate: [GuardService]}
+  { path: 'anuncio/:id', component: AnuncioComponent, canActivate: [GuardService]}
+
 
 ];
 

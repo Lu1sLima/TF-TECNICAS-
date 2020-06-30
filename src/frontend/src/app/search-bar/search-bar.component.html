@@ -108,7 +108,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button  [routerLink]="['/anuncio']" mat-raised-button color ="warn">Ver</button>
+          <button  [routerLink]="['/anuncio', anuncio.id]" mat-raised-button color ="warn">Ver</button>
         </mat-card-actions>
         <mat-card-footer >${{anuncio.preco}} </mat-card-footer>
 

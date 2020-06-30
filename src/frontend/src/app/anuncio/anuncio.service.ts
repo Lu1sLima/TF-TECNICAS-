@@ -17,6 +17,12 @@ export class AnuncioService {
     return this.http.get(this.apiUrl + 'anuncio/findAll/').pipe(catchError(this.handleError));
   }
 
+  findById(id: String){
+    return this.http.get(this.apiUrl + 'anuncio/' + `${id}`).pipe(catchError(this.handleError));
+  }
+
+
+
     handleError(error: HttpErrorResponse) {
       let errorMessage = '';
       if (error.error instanceof ErrorEvent) {

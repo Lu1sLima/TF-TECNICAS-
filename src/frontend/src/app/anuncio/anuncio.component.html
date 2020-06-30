@@ -1,6 +1,6 @@
 <div class="container">
 <br>
-<button mat-raised-button color ="warn"><- Voltar</button>
+<button mat-raised-button [routerLink]="['/verAnuncios']" color ="warn"><- Voltar</button>
 <br>
 <br>
 <mat-grid-list cols="3" rowHeight="100px"  gutterSize="5px">
@@ -13,26 +13,27 @@
 
     <mat-grid-tile [colspan]=1 [rowspan]=4 [style.background]="'#642EFE'" >
       <mat-grid-tile-header>
-        <h3> TITLE HERE</h3>
+        <h3>{{anuncio.title}}</h3>
       </mat-grid-tile-header>
 
 
 
-        <span [style.color]="'white'">Just another freakin' div in your tile</span>
+        <span [style.color]="'white'">{{anuncio.description}}</span>
 
 
       <mat-grid-tile-footer>
-        <h3>PRICE 250000</h3>
+        <h3>PRICE {{anuncio.preco}}</h3>
       </mat-grid-tile-footer>
     </mat-grid-tile>
 
 <mat-grid-tile
-
 [colspan]=3
 [rowspan]=3
 [style.background]="'gray'"
  >
+
 TEST
+
 </mat-grid-tile>
 
 

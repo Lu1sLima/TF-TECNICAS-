@@ -22,6 +22,10 @@ public class AnuncioController {
     @GetMapping(value = "/anuncio/findAll")
     public List<Anuncio> findAllAnuncios() {
         return anuncioService.findAll();
+    }
 
+    @GetMapping(value = "/anuncio/{id}")
+    public Anuncio findById(@PathVariable Long id){
+        return anuncioService.findById(id).get();
     }
 }

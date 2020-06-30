@@ -1,4 +1,6 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { AnuncioService } from './anuncio.service';
 
 @Component({
   selector: 'app-anuncio',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnuncioComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+  anuncio: any;
+
+  constructor(private route: ActivatedRoute,private anuncioService: AnuncioService) { }
 
   ngOnInit() {
+    this.id = this.route.snapshot.params['id'];
+    this.anuncioService.findById(this.id).subscribe(
+      res => {
+        this.anuncio = res;
+        console.log(this.anuncio);
+      }
+    )
+
+
   }
 
 }

@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Avaliacao {
+public class Avaliacao implements Comparable<Anuncio>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +26,8 @@ public class Avaliacao {
 
     String comentario;
     int pontuacao;
+
+    Integer visitas;
 
     public Avaliacao(Anuncio anuncio, User user, String comentario, int pontuacao) {
         if(pontuacao < 0 || pontuacao > 5){
@@ -44,6 +46,10 @@ public class Avaliacao {
         }else{
             this.pontuacao = pontuacao;
         }
+    }
+    @Override
+    public int compareTo(Anuncio o) {
+        return visitas.compareTo(o.visitas);
     }
 
 

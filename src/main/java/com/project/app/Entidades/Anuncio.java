@@ -29,6 +29,8 @@ public class Anuncio {
 
     //Byte imagem; learn how to do
 
+    Integer visitas;
+
     @OneToOne
     @JoinColumn(name = "vehicle_id")
     Vehicle vehicle;
@@ -39,6 +41,7 @@ public class Anuncio {
         this.description = description;
         this.vehicle = vehicle;
         this.preco = preco;
+        this.visitas = 0;
     }
 
 

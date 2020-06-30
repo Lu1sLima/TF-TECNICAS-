@@ -3,11 +3,26 @@
   height: auto;
 } */
 
-.left-align-forced {
-  width:100%;
-
-
+.mat-column-Comentario {
+  flex: 0 0 450px;
 }
+.mat-column-UserName {
+  flex: 0 0 100px;
+}
+.mat-column-Pontuacao {
+  flex: 0 0 100px;
+}
+
+.mat-table{
+  width:90%;
+}
+
+.spacer{
+  flex: 1 1;
+}
+
+
+
 
 
 

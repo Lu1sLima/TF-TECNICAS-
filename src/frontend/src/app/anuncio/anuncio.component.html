@@ -28,13 +28,38 @@
       </mat-grid-tile-footer>
     </mat-grid-tile>
 
-<mat-grid-tile
-[colspan]=3
-[rowspan]=3
-[style.background]="'gray'"
- >
+<mat-grid-tile [colspan]=3 [rowspan]=3 [style.background]="'gray'">
+  <mat-grid-tile-header>
+    <span>Avaliações:</span>
+    <div class= "spacer"></div>
+    <button mat-raised-button (click)="openDialog()" color ="warn">Avaliar</button>
 
-TEST
+  </mat-grid-tile-header>
+
+ <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- UserName Column -->
+  <ng-container matColumnDef="UserName">
+    <mat-header-cell *matHeaderCellDef> UserName </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.user.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Comentario Column -->
+  <ng-container matColumnDef="Comentario">
+    <mat-header-cell *matHeaderCellDef width ="20%"> Comentario </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.comentario}} </mat-cell>
+  </ng-container>
+
+  <!-- Pontuacao Column -->
+  <ng-container matColumnDef="Pontuacao">
+    <mat-header-cell *matHeaderCellDef> Pontuacao </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.pontuacao}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+
 
 </mat-grid-tile>
 

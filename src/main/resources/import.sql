@@ -6,4 +6,7 @@ INSERT INTO VEHICLE (modelo,tipo,marca,placa,novo) values ('fiesta2',1,0,'1234',
 INSERT INTO ANUNCIO (user_id,title,description,vehicle_id, preco) values (1,'title test 1','description test 1', 1, 3500);
 INSERT INTO ANUNCIO (user_id,title,description,vehicle_id, preco ) values (1,'title test 2','description test 2', 1, 7200);
 INSERT INTO ANUNCIO (user_id,title,description,vehicle_id, preco) values (2,'title test 3','description test 3', 2, 4000);
+INSERT INTO AVALIACAO (anuncio_id,user_id,comentario,pontuacao) values (1,1,'Oferta boa', 4);
+INSERT INTO AVALIACAO (anuncio_id,user_id,comentario,pontuacao) values (1,1,'Oferta muito ruim', 3);
+
 

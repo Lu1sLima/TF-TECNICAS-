@@ -1,5 +1,6 @@
 import { AnuncioService } from '../anuncio/anuncio.service';
 import { Component, OnInit } from '@angular/core';
+import { Route, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
@@ -15,10 +16,19 @@ export class SearchBarComponent implements OnInit {
   selectedNovo: boolean;
   precoMin: number;
   precoMax: number;
+  search: string;
 
-  constructor(private anuncioService: AnuncioService) { }
+  constructor(private anuncioService: AnuncioService, private route: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.search = params.get('search');
+    });
+
+    console.log(this.search);
+
      this.anuncioService.findAllAnuncios().subscribe(
        res => {   console.log(res);    this.anuncios = res;
           this.filteredAnuncios = res;

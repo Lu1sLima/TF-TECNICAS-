@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
       console.log(res);
 
         this.loginService.userId2 = res['id'];
+        this.loginService.city = res['city'];
 
         this.loginService.usuarioAutenticado = true;
 

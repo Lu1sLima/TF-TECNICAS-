@@ -16,6 +16,7 @@ export class LoginService{
   userName =  new EventEmitter<string>();
   userId =  new EventEmitter<string>();
   public userId2: string;
+  public city: string;
 
 
 

@@ -1,13 +1,66 @@
+<br>
+<br>
+
+<div style="text-align:center">
+  <h3>
+    Buscar um carro
+  </h3>
+</div>
+
+<div style="text-align:center">
+  <input  type="text" [(ngModel)]="search"  placeholder="Ex. Fiesta" />
+  <br>
+  <br>
+  <button mat-raised-button   [routerLink]="['/verAnuncios', search]"color="primary">Buscar</button>
+  <br>
+  <br>
+  <h3>Anuncios mais relevantes</h3>
+</div>
+
+<div id="card-container">
+  <mat-card *ngFor="let anuncio of anuncios" class="example-card" >
+    <mat-card-header >
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{anuncio.title}}</mat-card-title>
+      <mat-card-subtitle>{{anuncio.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/celta.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+       {{anuncio.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button  [routerLink]="['/anuncio', anuncio.id]" mat-raised-button color ="warn">Ver</button>
+    </mat-card-actions>
+    <mat-card-footer >${{anuncio.preco}} </mat-card-footer>
+
+  </mat-card>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- <ng-container>
 <div class="row align-items-center h-100">
     <div class="col-6 mx-auto" fxLayoutGap="100px">
         <div class="jumbotron" fxLayout="column" fxLayoutAlign="center center">
             <h1 class="card-title d-flex align-items-center">Search</h1>
-            <input type="text" class="d-flex align-items-center"   fxLayoutGap="20px grid" 
+            <input type="text" class="d-flex align-items-center"   fxLayoutGap="20px grid"
             fxLayout="row" fxLayoutAlign="center center" style="width: 400px;height:40px" placeholder="Digite um carro ou uma marca">
             <div fxLayout="row" fxLayoutGap="20px" style="position:absolute;top:140px">
                 <button class="btn btn-primary" >Procurar</button>
                 <button class="btn btn-primary" >Ver todos</button>
             </div>
-        </div>  
+        </div>
     </div>
 </div>
+</ng-container> -->
+
+
+

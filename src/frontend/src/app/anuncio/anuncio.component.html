@@ -15,16 +15,22 @@
       <mat-grid-tile-header>
         <h3>{{anuncio.title}}</h3>
       </mat-grid-tile-header>
-
-
-
-        <span [style.color]="'white'">{{anuncio.description}}
-          marca: {{anuncio.vehicle.marca}}
-        </span>
-
+      <div class="text-inside-grid" [style.color]="'white'">
+        {{anuncio.description}}
+        <br>
+        Marca: {{anuncio.vehicle.marca}}
+        <br>
+        Modelo: {{anuncio.vehicle.modelo}}
+        <br>
+        Tipo: {{anuncio.vehicle.tipo}}
+        <br>
+        Novo: {{anuncio.vehicle.novo}}
+        <br>
+        Contato: {{anuncio.user.contact}}
+      </div>
 
       <mat-grid-tile-footer>
-        <h3>PRICE {{anuncio.preco}}</h3>
+        <h3>PREÇO ${{anuncio.preco}}</h3>
       </mat-grid-tile-footer>
     </mat-grid-tile>
 

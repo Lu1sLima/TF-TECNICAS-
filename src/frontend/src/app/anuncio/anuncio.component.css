@@ -3,6 +3,11 @@
   height: auto;
 } */
 
+.text-inside-grid {
+  position: absolute;
+  left: 5px;
+}
+
 .mat-column-Comentario {
   flex: 0 0 450px;
 }

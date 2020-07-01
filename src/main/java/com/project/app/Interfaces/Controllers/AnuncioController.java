@@ -1,5 +1,7 @@
 package com.project.app.Interfaces.Controllers;
 
+import com.project.app.CasosDeUso.Politicas.PoliticaAnaliseAnuncio;
+import com.project.app.CasosDeUso.Politicas.PoliticaAnuncioSimples;
 import com.project.app.CasosDeUso.Servicos.AnuncioService;
 import com.project.app.CasosDeUso.Servicos.AvaliacaoService;
 import com.project.app.CasosDeUso.Servicos.UserService;
@@ -55,4 +57,11 @@ public class AnuncioController {
         Avaliacao avaliacao = new Avaliacao(anuncio,user,comentario,pontuacao);
         return avaliacaoService.addAvaliacao(avaliacao);
     }
+
+    @GetMapping(value = "/anuncio/relevantes/{city}")
+    public Anuncio[] findAllAnunciosRelevantes(@PathVariable String city){
+        PoliticaAnaliseAnuncio politica = new PoliticaAnuncioSimples();
+        return politica.analisaMaisRelevantes(city, anuncioService.findAll());
+    }
+
 }

@@ -8,6 +8,7 @@ import { throwError } from 'rxjs';
 })
 export class AnuncioService {
 
+
   private apiUrl = 'http://localhost:4200/api';
 
 
@@ -32,6 +33,10 @@ export class AnuncioService {
 
   createAvaliacao(anuncioId, userId, comentario: string, pontuacao: number){
     return this.http.post(this.apiUrl + '/anuncio/avaliacoes/' + `${anuncioId}` + "/" +  `${userId}` + "/" + `${comentario}` + "/" + `${pontuacao}`, null ).pipe(catchError(this.handleError)).subscribe();
+  }
+
+  findAllAnunciosRelevantes(city: string) {
+    return this.http.get(this.apiUrl + '/anuncio/relevantes/' + `${city}`).pipe(catchError(this.handleError));
   }
 
 

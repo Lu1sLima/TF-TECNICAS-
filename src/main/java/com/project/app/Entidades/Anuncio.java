@@ -29,7 +29,7 @@ public class Anuncio implements Comparable<Anuncio>{
 
     //Byte imagem; learn how to do
 
-    Integer visitas;
+    Integer visitas = 0;
 
     @OneToOne
     @JoinColumn(name = "vehicle_id")

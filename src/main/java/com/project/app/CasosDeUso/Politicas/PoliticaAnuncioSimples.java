@@ -74,20 +74,23 @@ public class PoliticaAnuncioSimples implements PoliticaAnaliseAnuncio {
             }
         }
 
+        recomendados = pq_city.toArray(recomendados);
+
         if (pq_city.size() < 5){
             PriorityQueue<Anuncio> recomendados_visitas = maisPesquisados(anuncios);
-            while(pq_city.size() != 5 && !recomendados_visitas.isEmpty()){
-               if(!pq_city.contains(recomendados_visitas.peek())){
-                    pq_city.add(recomendados_visitas.poll());
-               }
-               else{
-                   recomendados_visitas.poll();
-               }
+            int i = recomendados.length-1;
+            while(i < 5){
+                if(!pq_city.contains(recomendados_visitas.peek())){
+                    recomendados[i] = recomendados_visitas.poll();
+                    i ++;
+                }
+                else{
+                    recomendados_visitas.poll();
+                }
             }
         }
-        recomendados = pq_city.toArray(recomendados);
-        Collections.reverse(Arrays.asList(recomendados));
         return recomendados;
+
     }
 
 }

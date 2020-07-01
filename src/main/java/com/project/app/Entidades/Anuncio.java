@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Anuncio {
+public class Anuncio implements Comparable<Anuncio>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,6 +44,8 @@ public class Anuncio {
         this.visitas = 0;
     }
 
-
-
+    @Override
+    public int compareTo(Anuncio o) {
+        return this.visitas.compareTo(o.visitas);
+    }
 }

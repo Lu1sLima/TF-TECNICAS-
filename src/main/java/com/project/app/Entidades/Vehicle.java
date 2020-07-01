@@ -74,5 +74,9 @@ public class Vehicle {
 
     }
 
+    public Marca getMarca(){
+        return this.marca;
+    }
+
 
 }

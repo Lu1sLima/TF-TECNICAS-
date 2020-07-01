@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule,
   MatListModule, MatToolbarModule, MatCardModule, MatFormFieldModule,
-  MatInputModule, MatSelectModule, MatCheckboxModule, MatGridListModule, MatRadioModule,MatTableModule,MatDialogModule} from '@angular/material';
+  MatInputModule, MatSelectModule, MatCheckboxModule, MatGridListModule, MatRadioModule,MatTableModule,MatDialogModule, MatSlideToggle, MatSlideToggleModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AnuncioComponent } from './anuncio/anuncio.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -43,7 +44,8 @@ import { DialogComponent } from './dialog/dialog.component';
     MatNativeDateModule, MatIconModule, MatSidenavModule,
     MatListModule, MatCardModule, MatFormFieldModule, MatInputModule,
     MatSelectModule, MatCheckboxModule, MatGridListModule,
-    MatRadioModule,MatTableModule,MatDialogModule
+    MatRadioModule,MatTableModule,MatDialogModule, MatTableModule, MatSlideToggleModule,
+    FlexLayoutModule
   ],
   providers: [LoginService, GuardService],
   bootstrap: [AppComponent]

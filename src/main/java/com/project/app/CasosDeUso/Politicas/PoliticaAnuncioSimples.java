@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Arrays;
 
 import com.project.app.Entidades.Anuncio;
 import com.project.app.Entidades.Marca;
@@ -68,7 +69,7 @@ public class PoliticaAnuncioSimples implements PoliticaAnaliseAnuncio {
         Anuncio[] recomendados = new Anuncio[5];
         for (Anuncio anuncio : anuncios){
             String anuncio_cidade = anuncio.getUser().getCity();
-            if(anuncio_cidade == cidade){
+            if(anuncio_cidade.equals(cidade)){
                 pq_city.add(anuncio);
             }
         }
@@ -85,9 +86,8 @@ public class PoliticaAnuncioSimples implements PoliticaAnaliseAnuncio {
             }
         }
         recomendados = pq_city.toArray(recomendados);
+        Collections.reverse(Arrays.asList(recomendados));
         return recomendados;
     }
 
-    
-    
 }

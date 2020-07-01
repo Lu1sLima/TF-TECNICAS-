@@ -11,15 +11,11 @@ import com.project.app.Entidades.User;
 public class PoliticaPesquisaSimples implements PoliticaPesquisaAnuncio {
 
     @Override
-    public List<Anuncio> melhorPesquisa(String cidade, List<Anuncio> anuncios) {
-        List<Anuncio> anuncios_proximos = new ArrayList<>();
+    public List<Anuncio> melhorPesquisa(String keyword, List<Anuncio> anuncios) {
+        
         for (Anuncio anuncio : anuncios){
-            User usuario = anuncio.getUser();
-            String cidade_anunciante = usuario.getCity();
-
-            if (cidade == cidade_anunciante){
-                anuncios_proximos.add(anuncio);
-            }
+            List<String> matchables = new ArrayList<>();
+            
         }
         return anuncios_proximos;
     }

@@ -1,16 +1,44 @@
-<form>
+<br>
+<br>
+<br>
+<br>
+<div style="text-align:center">
+  <h1>
+    Login Screen
+  </h1>
+</div>
+<br>
+<div style="text-align:center">
+  <label>User Email:</label>
+  <br>
+  <input  type="text" [(ngModel)]="user"  placeholder="Ex. coxinha123@pucrs.br" />
+  <br>
+  <br>
+  <label>Password:</label>
+  <br>
+  <input  type="password" [(ngModel)]="password"  placeholder="Ex. coxinha123"/>
+  <br>
+  <br>
+  <button mat-raised-button (click)="loginUser()"  color="primary">Entrar</button>
+  <br>
+  <br>
+  <label *ngIf="validation" [style.color]="'red'">Login inválido!</label>
+
+</div>
+
+<!-- <form>
     <h2>Login screen testing</h2>
     <div class= "input">
       <label>Email</label>
       <input type="text" name ="user" [(ngModel)] = "user">
     </div>
-  
+
     <div class="input">
       <label>Password</label>
       <input type="password"  name = "password" [(ngModel)] = "password">
     </div>
-  
+
     <div class="input">
       <input type="submit" value="Login" (click)="loginUser()">
     </div>
-</form>
+</form> -->

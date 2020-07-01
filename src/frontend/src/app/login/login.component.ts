@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 
@@ -11,10 +11,13 @@ export class LoginComponent implements OnInit {
 
   user: string;
   password: string;
+  validation: boolean;
 
-  constructor(private router: Router,private loginService: LoginService) { }
+  constructor(private router: Router,private loginService: LoginService,private elementRef: ElementRef) { }
 
   ngOnInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#efeff5';
+
   }
 
   loginUser() {
@@ -34,12 +37,14 @@ export class LoginComponent implements OnInit {
 
         this.loginService.userId.emit(res['id']);
 
+        this.validation = false;
+
 
         this.router.navigate(['/']);
       },
       err => {
         this.loginService.usuarioAutenticado = false;
-
+        this.validation = true;
         this.loginService.mostrarMenu.emit(false);
       console.log(err);
       });

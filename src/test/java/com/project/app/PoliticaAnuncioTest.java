@@ -63,12 +63,15 @@ public class PoliticaAnuncioTest {
         Anuncio n1 = new Anuncio(user2, "teste anuncio", "teste description", vehicle3, 2500D);
         n1.setVisitas(3);
         this.anuncios.add(n1);
-        secondMostRelevant = new Anuncio(user3, "teste anuncio2", "teste description", vehicle2, 2300D);
+        secondMostRelevant = new Anuncio(user3, "second most relevant", "teste description", vehicle2, 2300D);
         this.secondMostRelevant.setVisitas(10);
         this.anuncios.add(secondMostRelevant);
         Anuncio n3 = new Anuncio(user4, "teste anuncio3", "teste description", vehicle3, 20000D);
         n3.setVisitas(4);
         this.anuncios.add(n3);
+        Anuncio n4 = new Anuncio(user3, "teste anuncio6", "teste description", vehicle2, 2300D);
+        n4.setVisitas(1);
+        this.anuncios.add(n4);
     }
 
     @Test
@@ -93,7 +96,7 @@ public class PoliticaAnuncioTest {
         Anuncio[] recomendados = this.politica.analisaMaisRelevantes(cidade, this.anuncios);
 
         Assert.assertEquals(recomendados[0].getUser().getCity(), mostRelevant.getUser().getCity());
-        Assert.assertEquals(recomendados[1].getVisitas(),  secondMostRelevant.getVisitas());
+        Assert.assertEquals(recomendados[4].getVisitas(),  secondMostRelevant.getVisitas());
     }
 
     @Test

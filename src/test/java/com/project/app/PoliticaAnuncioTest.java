@@ -3,6 +3,8 @@ package com.project.app;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.project.app.CasosDeUso.Politicas.PoliticaPesquisaAnuncio;
+import com.project.app.CasosDeUso.Politicas.PoliticaPesquisaSimples;
 import com.project.app.Entidades.Anuncio;
 import com.project.app.Entidades.Marca;
 import com.project.app.Entidades.Tipo;
@@ -23,6 +25,7 @@ import org.junit.jupiter.api.BeforeEach;
 public class PoliticaAnuncioTest {
     List<Anuncio> anuncios = new ArrayList<>();;
     PoliticaAnaliseAnuncio politica = new PoliticaAnuncioSimples();
+    PoliticaPesquisaAnuncio politicaPesquisa = new PoliticaPesquisaSimples();
     Anuncio mostRelevant;
     Anuncio secondMostRelevant;
 
@@ -92,4 +95,16 @@ public class PoliticaAnuncioTest {
         Assert.assertEquals(recomendados[0].getUser().getCity(), mostRelevant.getUser().getCity());
         Assert.assertEquals(recomendados[1].getVisitas(),  secondMostRelevant.getVisitas());
     }
+
+    @Test
+    public void shouldReturnMatchableAnuncio(){
+        String keyword = "viamao";
+
+        List<Anuncio> anunciosRetornados = politicaPesquisa.melhorPesquisa(keyword,this.anuncios);
+        Assert.assertTrue(anunciosRetornados.size() > 0);
+
+
+    }
+
+
 }

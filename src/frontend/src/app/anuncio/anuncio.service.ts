@@ -39,6 +39,10 @@ export class AnuncioService {
     return this.http.get(this.apiUrl + '/anuncio/relevantes/' + `${city}`).pipe(catchError(this.handleError));
   }
 
+  findAnunciosByKeyword(keyword: string){
+    return this.http.get(this.apiUrl + '/anuncio/pesquisa/' + `${keyword}`).pipe(catchError(this.handleError));
+  }
+
 
 
     handleError(error: HttpErrorResponse) {

@@ -27,12 +27,23 @@ export class SearchBarComponent implements OnInit {
       this.search = params.get('search');
     });
 
-    console.log(this.search);
-
+      if(this.search == null){
      this.anuncioService.findAllAnuncios().subscribe(
-       res => {   console.log(res);    this.anuncios = res;
+       res => {      this.anuncios = res;
           this.filteredAnuncios = res;
        });
+      }
+
+
+       if(this.search != null ){
+       this.anuncioService.findAnunciosByKeyword(this.search).subscribe(
+         res => {
+
+          this.filteredAnuncios = res;
+
+         }
+       );
+       }
 
      this.anuncioService.findAllMarcas().subscribe(   res => {  this.marcas = res;
       });

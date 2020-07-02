@@ -1,6 +1,5 @@
 package com.project.app.Entidades;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.*;
 
 import javax.persistence.*;
